@@ -20,11 +20,12 @@ Imports:
     gt (>= 0.8.0),
     magrittr,
     officer,
-    rlang
+    rlang,
+    xml2
 Suggests: 
     testthat (>= 3.0.0),
-    xml2,
     dplyr,
-    tibble
+    tibble,
+    covr
 RoxygenNote: 7.2.1
 Config/testthat/edition: 3
