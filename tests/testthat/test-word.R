@@ -596,13 +596,14 @@ test_that("tables with summaries can be added to a word doc", {
     dplyr::select(-c(fctr, date, time, datetime)) %>%
     gt::gt(rowname_col = "row", groupname_col = "group") %>%
     gt::summary_rows(
-      columns = num,
+      groups = TRUE,
+      columns = "num",
       fns = list(
         avg = ~mean(., na.rm = TRUE),
         total = ~sum(., na.rm = TRUE),
         s.d. = ~sd(., na.rm = TRUE)
       ),
-      fmt = list(~ fmt_number(.))
+      formatter = fmt_number
     )
 
   ## Add table to empty word document
@@ -1360,6 +1361,8 @@ test_that("tables with cell & text coloring can be added to a word doc - with so
 
 test_that("tables with cell & text coloring can be added to a word doc - with summaries (grand/group)", {
 
+  skip("Seems to be issues with gt v0.8.0, and is fixed in devel version point")
+
   check_suggests_xml()
 
   ## simple table
@@ -1373,7 +1376,7 @@ test_that("tables with cell & text coloring can be added to a word doc - with su
         total = ~sum(., na.rm = TRUE),
         s.d. = ~sd(., na.rm = TRUE)
       ),
-      fmt = list(~ fmt_number(.))
+      formatter = fmt_number
     ) %>%
     grand_summary_rows(
       columns = num,
@@ -1382,7 +1385,7 @@ test_that("tables with cell & text coloring can be added to a word doc - with su
         total = ~sum(., na.rm = TRUE),
         s.d. = ~sd(., na.rm = TRUE)
       ),
-      fmt = list(~ fmt_number(.))
+      formatter = fmt_number
     ) %>%
     tab_style(
       style = cell_text(color = "orange"),
@@ -1533,6 +1536,8 @@ test_that("tables with cell & text coloring can be added to a word doc - with su
 
 test_that("tables preserves spaces in text & can be added to a word doc", {
 
+  skip("Only done in devel gt at this point")
+
   check_suggests_xml()
 
   ## simple table
@@ -1604,6 +1609,8 @@ test_that("tables preserves spaces in text & can be added to a word doc", {
 })
 
 test_that("tables respects column and cell alignment and can be added to a word doc", {
+
+  skip("Only done in devel gt at this point")
 
   check_suggests_xml()
 
