@@ -1,0 +1,30 @@
+Package: gto
+Type: Package
+Title: Insert gt tables into word documents
+Version: 0.1.0
+Authors@R: 
+    c( person(given = "Ellis",
+              family = "Hughes",
+              role = c("aut","cre"),
+              email = "ellis.h.hughes@gsk.com",
+              comment = c(ORCID = "0000-0003-0637-4436")),
+       person("GlaxoSmithKline Research & Development Limited", role = c("cph", "fnd"))       
+    )
+Description: This package facilitates the insertion of tables created by 
+    the "gt" R package into Microsoft Word documents. Using the "officer" package,
+    tables will be converted into ooxml and then added into the document.
+License: Apache License (>= 2)
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    gt (>= 0.8.0),
+    magrittr,
+    officer,
+    rlang
+Suggests: 
+    testthat (>= 3.0.0),
+    xml2,
+    dplyr,
+    tibble
+RoxygenNote: 7.2.1
+Config/testthat/edition: 3
