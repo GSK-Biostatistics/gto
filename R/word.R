@@ -40,6 +40,7 @@
 #' @importFrom rlang is_installed arg_match
 #' @importFrom officer body_add_xml
 #' @importFrom gt as_word
+#' @importFrom xml2 read_xml xml_children
 #'
 body_add_gt <- function(
   x,
@@ -79,8 +80,8 @@ body_add_gt <- function(
     tbl_ooxml,
     "</tablecontainer>"
     ) %>%
-    xml2::read_xml() %>%
-    xml2::xml_children()
+    read_xml() %>%
+    xml_children()
 
   order_to_add_nodes <- seq_along(tbl_nodes)
   if(pos == "before"){
