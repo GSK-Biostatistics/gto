@@ -10,9 +10,10 @@ Authors@R:
               comment = c(ORCID = "0000-0003-0637-4436")),
        person("GlaxoSmithKline Research & Development Limited", role = c("cph", "fnd"))       
     )
-Description: This package facilitates the insertion of tables created by 
-    the "gt" R package into Microsoft Word documents. Using the "officer" package,
-    tables will be converted into ooxml and then added into the document.
+Description: Insert tables created by the "gt" R package into Microsoft Word 
+    documents. This gives users the ability to add to their existing word documents
+    the tables made in "gt" using the familiar "officer" package and syntax from
+    the "officeverse".
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
