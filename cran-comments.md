@@ -3,7 +3,6 @@
 * local R Installation R 4.1.1
 * Windows with R-release, R4.1, R3.6 (github actions)
 * Ubuntu with R-devel, R-release (github)
-*
 
 
 ## R CMD check results
