@@ -48,17 +48,21 @@ Add a gt table into a Word document. The table will be processed
 }
 \examples{
 
-library(officer)
-library(gt)
+if(interactive()){
 
-gt_tbl <- gt(head(exibble))
+ library(officer)
+ library(gt)
 
-doc <- read_docx()
-doc <- body_add_gt(doc, value = gt_tbl)
-fileout <- tempfile(fileext = ".docx")
-print(doc, target = fileout)
+ gt_tbl <- gt(head(exibble))
+
+ doc <- read_docx()
+ doc <- body_add_gt(doc, value = gt_tbl)
+ fileout <- tempfile(fileext = ".docx")
+ print(doc, target = fileout)
+
+}
 
 }
 \seealso{
-\link[flextable:body_add_flextable]{flextable::body_add_flextable()}
+flextable::body_add_flextable()
 }

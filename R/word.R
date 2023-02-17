@@ -23,7 +23,7 @@
 #'
 #' @returns An updated rdocx object with a gt table inserted
 #'
-#' @seealso \link[flextable:body_add_flextable]{flextable::body_add_flextable()}
+#' @seealso flextable::body_add_flextable()
 #'
 #' @examples
 #'
