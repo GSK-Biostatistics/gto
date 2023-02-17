@@ -23,19 +23,23 @@
 #'
 #' @returns An updated rdocx object with a gt table inserted
 #'
-#' @seealso \link[flextable]{body_add_flextable}
+#' @seealso \link[flextable:body_add_flextable]{flextable::body_add_flextable()}
 #'
 #' @examples
 #'
-#' library(officer)
-#' library(gt)
+#' if(interactive()){
 #'
-#' gt_tbl <- gt(head(exibble))
+#'  library(officer)
+#'  library(gt)
 #'
-#' doc <- read_docx()
-#' doc <- body_add_gt(doc, value = gt_tbl)
-#' fileout <- tempfile(fileext = ".docx")
-#' print(doc, target = fileout)
+#'  gt_tbl <- gt(head(exibble))
+#'
+#'  doc <- read_docx()
+#'  doc <- body_add_gt(doc, value = gt_tbl)
+#'  fileout <- tempfile(fileext = ".docx")
+#'  print(doc, target = fileout)
+#'
+#' }
 #'
 #' @importFrom rlang is_installed arg_match
 #' @importFrom officer body_add_xml

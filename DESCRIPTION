@@ -1,6 +1,6 @@
 Package: gto
 Type: Package
-Title: Insert gt tables into word documents
+Title: Insert {gt} Tables into Word Documents
 Version: 0.1.0
 Authors@R: 
     c( person(given = "Ellis",

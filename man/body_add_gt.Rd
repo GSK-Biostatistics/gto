@@ -60,5 +60,5 @@ print(doc, target = fileout)
 
 }
 \seealso{
-\link[flextable]{body_add_flextable}
+\link[flextable:body_add_flextable]{flextable::body_add_flextable()}
 }
