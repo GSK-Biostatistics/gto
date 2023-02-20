@@ -1,6 +1,6 @@
 Package: gto
 Type: Package
-Title: Insert {gt} Tables into Word Documents
+Title: Insert 'gt' Tables into Word Documents
 Version: 0.1.0
 Authors@R: 
     c( person(given = "Ellis",
@@ -10,10 +10,10 @@ Authors@R:
               comment = c(ORCID = "0000-0003-0637-4436")),
        person("GlaxoSmithKline Research & Development Limited", role = c("cph", "fnd"))       
     )
-Description: Insert tables created by the "gt" R package into Microsoft Word 
+Description: Insert tables created by the 'gt' R package into 'Microsoft Word' 
     documents. This gives users the ability to add to their existing word documents
-    the tables made in "gt" using the familiar "officer" package and syntax from
-    the "officeverse".
+    the tables made in 'gt' using the familiar 'officer' package and syntax from
+    the 'officeverse'.
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true

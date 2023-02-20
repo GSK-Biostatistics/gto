@@ -2,7 +2,7 @@
 % Please edit documentation in R/word.R
 \name{body_add_gt}
 \alias{body_add_gt}
-\title{Add gt table into a Word document}
+\title{Add 'gt' table into a Word document}
 \usage{
 body_add_gt(
   x,
@@ -18,14 +18,14 @@ body_add_gt(
 \arguments{
 \item{x}{`rdocx` object}
 
-\item{value}{`gt` object}
+\item{value}{`gt_tbl` object}
 
 \item{align}{left, center (default) or right.}
 
 \item{pos}{where to add the gt table relative to the cursor, one of "after"
 (default), "before", "on" (end of line).}
 
-\item{caption_location}{top (default), bottom, or embed Indicating if the
+\item{caption_location}{top (default), bottom, or embed indicating if the
 title and subtitle should be listed above, below, or be embedded in the
 table}
 
@@ -39,16 +39,14 @@ break across pages'.}
 TRUE. It avoids page break within tables.}
 }
 \value{
-An updated rdocx object with a gt table inserted
+An updated rdocx object with a 'gt' table inserted
 }
 \description{
-Add a gt table into a Word document. The table will be processed
+Add a 'gt' table into a Word document. The table will be processed
   using the \link[gt]{as_word} function then inserted either after, before,
   or on the cursor location.
 }
 \examples{
-
-if(interactive()){
 
  library(officer)
  library(gt)
@@ -60,7 +58,6 @@ if(interactive()){
  fileout <- tempfile(fileext = ".docx")
  print(doc, target = fileout)
 
-}
 
 }
 \seealso{

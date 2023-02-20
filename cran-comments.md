@@ -17,5 +17,6 @@ There are no downstream dependencies currently
 
 ## Notes
 
-* This is the first submission to CRAN
-* "officeverse" is referencing the series of packages by David Gohel (https://ardata-fr.github.io/officeverse/), and is no misspelled
+* This is a resubmission for the first release to CRAN
+* "officeverse" is referencing the series of packages by David Gohel (https://ardata-fr.github.io/officeverse/), and is no misspelled. It is not, however, a method and I import the package for use so I don't think we need a citation.
+
