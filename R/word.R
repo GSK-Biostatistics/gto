@@ -1,13 +1,13 @@
-#' @title Add gt table into a Word document
+#' @title Add 'gt' table into a Word document
 #'
-#' @description Add a gt table into a Word document. The table will be processed
+#' @description Add a 'gt' table into a Word document. The table will be processed
 #'   using the \link[gt]{as_word} function then inserted either after, before,
 #'   or on the cursor location.
 #'
 #' @param x `rdocx` object
-#' @param value `gt` object
+#' @param value `gt_tbl` object
 #' @param align left, center (default) or right.
-#' @param caption_location top (default), bottom, or embed Indicating if the
+#' @param caption_location top (default), bottom, or embed indicating if the
 #'   title and subtitle should be listed above, below, or be embedded in the
 #'   table
 #' @param caption_align left (default), center, or right. Alignment of caption
@@ -21,21 +21,22 @@
 #'
 #' @export
 #'
-#' @returns An updated rdocx object with a gt table inserted
+#' @returns An updated rdocx object with a 'gt' table inserted
 #'
-#' @seealso \link[flextable]{body_add_flextable}
+#' @seealso flextable::body_add_flextable()
 #'
 #' @examples
 #'
-#' library(officer)
-#' library(gt)
+#'  library(officer)
+#'  library(gt)
 #'
-#' gt_tbl <- gt(head(exibble))
+#'  gt_tbl <- gt(head(exibble))
 #'
-#' doc <- read_docx()
-#' doc <- body_add_gt(doc, value = gt_tbl)
-#' fileout <- tempfile(fileext = ".docx")
-#' print(doc, target = fileout)
+#'  doc <- read_docx()
+#'  doc <- body_add_gt(doc, value = gt_tbl)
+#'  fileout <- tempfile(fileext = ".docx")
+#'  print(doc, target = fileout)
+#'
 #'
 #' @importFrom rlang is_installed arg_match
 #' @importFrom officer body_add_xml
