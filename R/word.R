@@ -82,7 +82,8 @@ body_add_gt <- function(
     "</tablecontainer>"
     ) %>%
     read_xml() %>%
-    xml_children()
+    xml_children()  %>%
+    suppressWarnings()
 
   order_to_add_nodes <- seq_along(tbl_nodes)
   if(pos == "before"){

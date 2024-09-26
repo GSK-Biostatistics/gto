@@ -12,6 +12,10 @@ suppressPackageStartupMessages({
   library(dplyr)
 })})
 
+set_diff_nodesets <- function(x, y){
+  x[!x%in%y]
+}
+
 test_that("tables can be added to a word doc", {
 
   check_suggests_xml()
@@ -59,7 +63,7 @@ test_that("tables can be added to a word doc", {
   docx_table_body_contents <-
     docx_contents[3] %>%
     xml2::xml_find_all(".//w:tr") %>%
-    setdiff(docx_table_body_header)
+    set_diff_nodesets(docx_table_body_header)
 
   expect_equal(
     docx_table_caption_text,
@@ -166,7 +170,7 @@ test_that("tables can be added to a word doc - position 'before'", {
   docx_table_body_contents <-
     docx_table_contents[3] %>%
     xml2::xml_find_all(".//w:tr") %>%
-    setdiff(docx_table_body_header)
+    set_diff_nodesets(docx_table_body_header)
 
   expect_equal(
     docx_table_caption_text,
@@ -261,7 +265,7 @@ test_that("tables with special characters can be added to a word doc", {
   docx_table_body_contents <-
     docx_contents[3] %>%
     xml2::xml_find_all(".//w:tr") %>%
-    setdiff(docx_table_body_header)
+    set_diff_nodesets(docx_table_body_header)
 
   expect_equal(
     docx_table_caption_text,
@@ -344,7 +348,7 @@ test_that("tables with embedded titles can be added to a word doc", {
   docx_table_body_contents <-
     docx_contents[1] %>%
     xml2::xml_find_all(".//w:tr") %>%
-    setdiff(docx_table_body_header)
+    set_diff_nodesets(docx_table_body_header)
 
   expect_equal(
     docx_table_body_header %>%
