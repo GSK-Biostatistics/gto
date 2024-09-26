@@ -1,3 +1,7 @@
+# gto 0.1.2
+
+* patch release to continue to function correctly testing on R Devel 4.5.0
+
 # gto 0.1.1
 
 * patch release based on updates required to stay on CRAN after {gt} 0.9.0
